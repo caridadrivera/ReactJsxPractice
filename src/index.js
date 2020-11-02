@@ -2,21 +2,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//create react component 
 const App = () => {
   return (
-    <div>
-      <label>Enter name:</label>
-      <input for="name"></input>
-      <button id="name" style={{backgroundColor: 'blue'}}>Submit</button>
+    <div className="ui container comments">
+     <div className="comment">
+      <a href="/" className="avatar">
+        <img alt="avatar"/>
+      </a>
+      <div className="content">
+        <a href="/" className="author"></a>
+      </div>
+      <div className="metadata">
+        <span className="date"> Today at 6:00pm </span>
+      </div>
+      <div className="text">Nice blog post!</div>
+     </div>
     </div>
   )
 }
 
-//take react component and show it on screen. 
-ReactDOM.render(
-  <App />,
-  document.querySelector('#root')
-)
 
-
+ReactDOM.render(<App/>, document.querySelector('#root'))
